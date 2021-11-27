@@ -8,8 +8,8 @@ class GenreDAO:
 
     def get_all_genres(self):
         all_directors = self.session.query(Genre).all()
-        return all_directors, 200
+        return all_directors
 
     def get_one_genre(self, mid):
         one_genre = self.session.query(Genre).get(mid)
-        return one_genre, 200
+        return one_genre

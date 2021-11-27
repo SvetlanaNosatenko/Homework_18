@@ -14,8 +14,10 @@ class MovieService:
             # фильмы определенного жанра по запросу
             result = self.movie_dao.get_by_genre_id(movie_dict.get("genre_id"))
         elif movie_dict.get("year_id") is not None:
+            # фильмы определенного года по запросу
             result = self.movie_dao.get_by_year_id(movie_dict.get("year_id"))
         else:
+            # список всех фильмов
             result = self.movie_dao.get_all_movie()
         return result
 

@@ -8,11 +8,11 @@ class DirectorDAO:
 
     def get_all_directors(self):
         all_directors = self.session.query(Director).all()
-        return all_directors, 200
+        return all_directors
 
     def get_one_director(self, did):
         one_director = self.session.query(Director).get(did)
-        return one_director, 200
+        return one_director
 
 
 
